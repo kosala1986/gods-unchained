@@ -44,8 +44,9 @@ export class HttpService {
   }
 
   /**
-   * Transforms error messages into developer friendly messages.
+   * Transforms error messages into developer friendly messages. 
    */
+  // TODO: Adds Error Service.
   private handleError(error: HttpErrorResponse): Observable<never> {
     let errorMessage: string = '';
     if (error.error instanceof ErrorEvent) {
