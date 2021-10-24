@@ -13,11 +13,6 @@
 	img {
 		height: 245px;
 		width: 170px;
-
-		@include for-screen(md, "<=") {
-			height: 320px;
-			width: 240px;
-		}
 	}
 
 	&.selected {
