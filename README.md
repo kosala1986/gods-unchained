@@ -1,6 +1,6 @@
-# GodsUnchained
+# GodsUnchained – Card Selector
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.10.
+This project is a single page angular application which shows a list of Gods Unchained cards and allows the user to select a card to be highlighted in the top section.
 
 ## Getting started
 
