@@ -1,0 +1,26 @@
+<div class="selector-panel-container" >
+  <div class="selected-card-container">
+    <card *ngIf="selectedCard" 
+          [card]="selectedCard" 
+          [isSelectedCard]="true" 
+          [quality]="qualities.SHADOW">
+    </card>
+  </div>
+  <div class="card-list-container">
+    <div class="search-box">
+      <input type="text" 
+             id="search-card" 
+             name="search-card" 
+             placeholder="Search" 
+             (keyup)="searchQuery$.next($event)">
+    </div>
+    <div class="card-list" fxLayout="row" fxLayoutAlign="space-around center">
+      <card *ngFor="let card of cardList; let i = index" 
+            [card]="card" 
+            [isSelectedCard]="false" 
+            [quality]="qualities.PLAIN"
+            (click)="getCard(card)" >
+      </card>
+    </div>
+  </div>
+</div>
