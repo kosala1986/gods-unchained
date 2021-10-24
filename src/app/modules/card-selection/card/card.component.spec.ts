@@ -39,6 +39,5 @@ describe('CardComponent', () => {
     const containerElement = fixture.debugElement.query(By.css('.selected'));
 
     expect(containerElement).toBeTruthy();
-
   });
 });

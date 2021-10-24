@@ -58,7 +58,6 @@ describe('CardSelectionPanelComponent', () => {
     tick(600);
 
     expect(component.cardList).toEqual(mockCardList);
-
   }));
 
   it('should show correct cards searching by name', fakeAsync(() => {
@@ -75,7 +74,6 @@ describe('CardSelectionPanelComponent', () => {
     tick(600);
 
     expect(component.cardList).toEqual([SearchedCard]);
-
   }));
 
   it('should show correct cards searching by effect', fakeAsync(() => {
@@ -92,7 +90,6 @@ describe('CardSelectionPanelComponent', () => {
     tick(600);
 
     expect(component.cardList).toEqual([SearchedCard]);
-
   }));
 
 });
