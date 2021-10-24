@@ -56,7 +56,9 @@ export class CardSelectionPanelComponent implements OnInit, OnDestroy {
             const cardList: Card[] = this.cardList.filter(card => {
               const cardName = card.name.toLowerCase();
               const cardEffect = card.effect.toLowerCase();
-              return cardName.includes(searchQuery.toLowerCase()) || cardEffect.includes(searchQuery.toLowerCase());
+
+              return cardName.includes(searchQuery.toLowerCase()) ||
+                cardEffect.includes(searchQuery.toLowerCase());
             });
             return of(cardList);
           } else {
