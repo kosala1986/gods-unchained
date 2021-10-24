@@ -46,4 +46,29 @@ describe('HttpServiceService', () => {
     req.error(mockError, { status: 400 });
   });
 
+  it('returns data when post method is successful', () => {
+    mockService.post('postUrl', {}).subscribe(response => {
+      expect(mockResponse.success).toBe(true);
+    });
+
+    const req = httpTestingController.expectOne('postUrl');
+    expect(req.request.method).toBe("POST");
+    req.flush(mockResponse);
+  });
+
+  it('returns error when post method fails', () => {
+    mockService.get('postUrl').subscribe(response => {
+    }, (errorInfo) => {
+      expect(errorInfo.status).toBe(500);
+      expect(errorInfo.message).toBe('Server error');
+    });
+
+    const mockError = new ErrorEvent('error', {
+      message: 'Server error',
+    });
+
+    const req = httpTestingController.expectOne('postUrl');
+    req.error(mockError, { status: 500 });
+  });
+
 });
