@@ -6,7 +6,7 @@
 	justify-content: center;
 	margin-bottom: 5px;
 
-	@include for-screen(md, "<=") {
+	@include for-screen(sm) {
 		margin-bottom: 10px;
 	}
 

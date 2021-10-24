@@ -59,7 +59,7 @@
 			padding-left: 10px;
 			width: 450px;
 
-			@include for-screen(sm, "<=") {
+			@include for-screen(sm) {
 				height: 60px;
 				width: 600px;
 			}
