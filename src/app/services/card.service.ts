@@ -9,10 +9,10 @@ import { environment } from 'src/environments/environment';
  * Cards and other properties returned from the list of cards API.
  */
 export interface CardList {
-  total: number,
-  page: number,
-  perPage: number,
-  records: Card[],
+  total: number;
+  page: number;
+  perPage: number;
+  records: Card[];
 }
 
 /** Card service providing data to components. */

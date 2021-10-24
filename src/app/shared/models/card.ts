@@ -1,11 +1,11 @@
 
 /** Card model */
 export interface Card {
-    id: number,
-    name: string,
-    effect: string,
-    god: God,
-    rarity: Rarity,
+    id: number;
+    name: string;
+    effect: string;
+    god: God;
+    rarity: Rarity;
     [propName: string]: any;
 }
 
