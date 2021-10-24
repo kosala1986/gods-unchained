@@ -1,64 +1,65 @@
-@import '../../../shared/css/colors';
-@import '../../../shared/css/responsive_mixins';
+@import "../../../shared/css/colors";
+@import "../../../shared/css/responsive_mixins";
 
 .selector-panel-container {
-    height: 100%;
-    margin: auto;
-    padding-bottom: 20px;
-    width: 980px; 
+	height: 100%;
+	margin: auto;
+	padding-bottom: 20px;
+	width: 980px;
 }
 
 .selected-card-container {
-    background-image: url('../../../../assets/images/teal-agrodor.svg');
-    background-size: 980px 360px;
-    background-size: cover;
-    background-position: 50%;
-    bottom: 0px;
-    height: 360px;
-    margin: 0 auto;
-    position: static;
-    width: inherit;
+	background-image: url("../../../../assets/images/teal-agrodor.svg");
+	background-size: 980px 360px;
+	background-size: cover;
+	background-position: 50%;
+	bottom: 0px;
+	height: 360px;
+	margin: 0 auto;
+	position: static;
+	width: inherit;
 
-    @include for-screen(sm) {
-        height: 500px;
-        width: 100%;
-      }
+	@include for-screen(sm) {
+		height: 500px;
+		width: 100%;
+	}
 }
 
- .card-list-container {
-    background-color: $color-card-list;
-    height: 100%;
-    margin-top: 10px;
-    margin: auto;
-    width: inherit;
+.card-list-container {
+	background-color: $color-card-list;
+	height: 100%;
+	margin-top: 10px;
+	margin: auto;
+    min-height: 600px;
+	width: inherit;
 
-    .card-list {
-        flex-wrap: wrap;
-        padding: 50px 20px 50px 20px;
-        margin: auto;
-        width: inherit;
-    }
+	.card-list {
+		flex-wrap: wrap;
+		padding: 50px 20px 50px 20px;
+		margin: auto;
+		width: inherit;
+	}
 
-    .search-box {
-        padding-top: 25px;
-        text-align: center;
+	.search-box {
+		padding-top: 25px;
+		text-align: center;
 
-        input {
-            background-color: inherit;
-            border: 1px #232323 solid;
-            color: $color-white;
-            height: 30px;
-            padding-left: 10px;
-            width: 450px;
+		input {
+			background-color: inherit;
+			border: 1px #232323 solid;
+			color: $color-white;
+			height: 30px;
+			padding-left: 10px;
+			width: 450px;
 
-            @include for-screen(sm, '<=') {
-                height: 60px;
-                width: 600px;
-              }
-        }
+			@include for-screen(sm, "<=") {
+				height: 60px;
+				width: 600px;
+			}
+		}
 
-        :focus-visible {
-            outline: none;
-          }
-    }
+		:focus-visible {
+			outline: none;
+		}
+	}
 }
