@@ -29,7 +29,7 @@ export enum Rarity {
     MYTHIC = 'mythic',
 }
 
-/** cosmetic quality */
+/** card cosmetic quality */
 export enum Quality {
     SHADOW = 3,
     PLAIN = 5,
