@@ -16,7 +16,7 @@ export class HttpService {
   constructor(private readonly http: HttpClient,
   ) { }
 
-  /** GET method which returns Observable of T */
+  /** GET method which returns Observable of T. */
   get<T>(url: string, p?: Params): Observable<T> {
     let header = this.createHeader();
     return this.http.get<T>(url, { headers: header, params: p })
@@ -26,7 +26,7 @@ export class HttpService {
       );
   }
 
-  /** POST method which returns Observable of R */
+  /** POST method which returns Observable of R. */
   post<T, R>(path: string, payload: T): Observable<R> {
     const httpOptions = {
       headers: this.createHeader(),
