@@ -26,9 +26,9 @@ export class CardService {
   ) { }
 
   /** Gets card list from the backend API. */
-  //TODO: Loads more records from API with pagenation support or may be 100
-  //records at once.
   getCardList(): Observable<Card[]> {
+    //TODO: Loads more records from API with pagination support or may be 100
+    //records at a time.
     return this.httpService.get(environment.cardListUrl)
       .pipe(
         map((response) => {
