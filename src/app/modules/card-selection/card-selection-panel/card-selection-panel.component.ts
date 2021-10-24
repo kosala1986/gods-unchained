@@ -31,6 +31,12 @@ export class CardSelectionPanelComponent implements OnInit, OnDestroy {
     this.selectedCard = selectedCard;
   }
 
+  /**
+   * Retrieves cards from godsunchained API. Current implementation only loads
+   * 20 records at once and searching happens on already loaded cards.
+   * Loading/searching event triggers either when component is loading with
+   * empty string or search string length more than 3 characters.
+   */
   search(): void {
     this.searchQuery$
       .pipe(

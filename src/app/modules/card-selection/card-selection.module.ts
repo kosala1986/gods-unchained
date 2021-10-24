@@ -7,7 +7,10 @@ import { CardComponent } from './card/card.component';
 import { CardService } from '../../services/card.service';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
-
+/**
+ * This is a lazy loaded module which wrapped all card related components and
+ * services. We load this module with app module together. 
+ */
 @NgModule({
   declarations: [CardSelectionPanelComponent, CardComponent,],
   providers: [CardService],
