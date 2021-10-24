@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
-import { retry, catchError } from 'rxjs/operators';
+import { catchError } from 'rxjs/operators';
 import { Params } from '@angular/router';
 
 /**
@@ -21,7 +21,6 @@ export class HttpService {
     let header = this.createHeader();
     return this.http.get<T>(url, { headers: header, params: p })
       .pipe(
-        retry(3),
         catchError(this.handleError)
       );
   }
@@ -33,7 +32,6 @@ export class HttpService {
     };
     return this.http.post<R>(path, payload, httpOptions)
       .pipe(
-        retry(3),
         catchError(this.handleError)
       );
   }
