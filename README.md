@@ -1,6 +1,6 @@
 # GodsUnchained – Card Selector
 
-This project is a single page angular application which shows a list of Gods Unchained cards and allows the user to select a card to be highlighted in the top section.
+This project is a single page Angular application which shows a list of Gods Unchained cards and allows the user to select a card to be highlighted in the top section.
 
 ## Getting started
 
